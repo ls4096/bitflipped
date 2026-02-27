@@ -9,7 +9,7 @@ Cosmic rays hit computer RAM all the time. If your RAM is not ECC protected, it 
 
 Bit flips manifest in many ways - computer clusters suddenly dying, data silently being corrupted, and even [squatting on domain names that are a bit adjacent](http://dinaburg.org/bitsquatting.html).
 
-To start your very own bit flip detector, simply run `make` and `./bitflip`. The source code has no dependencies and is worryingly simple.
+To start your very own bit flip detector, simply run `make` and `./bitflip`. The source code has no dependencies and is worryingly simple. Optional arguments are `-g <gigabytes>` to specify the size of the memory allocation and `-d <seconds>` to specify the delay interval between tests/checks.
 
 Detection is via allocating a slice of zeroed memory, in our case a gigabyte, and then once per minute going through to ensure they're actually all zeroes. Magic!
 
